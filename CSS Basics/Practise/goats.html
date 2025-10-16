@@ -1,0 +1,86 @@
+<style>
+  .img {
+    object-fit: cover;
+    height: 250px;
+  }
+
+  .name,
+  .friends,
+  .button {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .name {
+    font-weight: 900;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .friends {
+    margin-top: 8px;
+    font-size: 10px;
+    color: gray;
+    font-weight: 500;
+  }
+
+  .container {
+    display: inline-block;
+  }
+
+  .button {
+    background-color: rgb(65, 65, 231);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .container {
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    vertical-align: top;
+    height: 340px;    
+  }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOATs</title>
+</head>
+<body>
+  <div class="container">
+    <img src="img\lebron.webp" alt="Lebron James" class="img">
+    <h5 class="name">Lebron James</h5>
+    <p class="friends">2 mutual friends</p>
+    <button class="button">Add Friend</button>
+  </div>
+
+  <div class="container">
+    <img src="img\kevin.jpg" alt="Lebron James" class="img">
+    <h5 class="name">Kevin Durant</h5>
+    <p class="friends">3 mutual friends</p>
+    <button class="button">Add Friend</button>
+  </div>
+
+  <div class="container">
+    <img src="img\giannis.avif" alt="Lebron James" class="img">
+    <h5 class="name">Giannis Antetokounmpo</h5>
+    <p class="friends">4 mutual friends</p>
+    <button class="button">Add Friend</button>
+  </div>
+</body>
+</html>
