@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Mail list – nested flex</title>
+<style>
+  :root {
+    --card:#fff; --border:#e7e7e7; --shadow:0 2px 10px rgba(0,0,0,.08);
+    --sender:#111; --subject:#333; --snippet:#6b6b6b; --time:#666;
+  }
+
+  body { font-family: Arial, Helvetica, sans-serif; background:#fafafa; margin:0; padding:24px; }
+
+  .card {
+    background:var(--card);
+    width: 560px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    padding:14px;
+  }
+
+  .heading {
+    color:#8a8a8a;
+    font-size:13px;
+    letter-spacing:.5px;
+    margin:6px 6px 12px;
+  }
+
+  /* one email row = OUTER FLEX */
+  .item {
+    display:flex;
+    align-items:flex-start;      /* time sits at top */
+    gap:12px;
+    padding:10px 8px;
+    border-radius:8px;
+  }
+  .item + .item { margin-top:6px; }
+
+  .avatar {
+    flex:0 0 48px;
+    width:48px; height:48px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* middle column = INNER FLEX (vertical stack) */
+  .content {
+    flex:1 1 auto;
+    display:flex;
+    flex-direction:column;
+    min-width:0;                /* enables text ellipsis */
+    gap:2px;
+  }
+
+  .line-top {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:0;
+  }
+
+  .sender {
+    font-weight:800;
+    color:var(--sender);
+    font-size:18px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .time {
+    margin-left:auto;           /* pushes time to far right */
+    color:var(--time);
+    font-size:13px;
+    white-space:nowrap;
+  }
+
+  .subject {
+    font-weight:700;
+    color:var(--subject);
+    font-size:15px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .snippet {
+    color:var(--snippet);
+    font-size:14px;
+    line-height:1.25;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="heading">ALL INBOXES</div>
+
+  <!-- Email 1 -->
+  <div class="item">
+    <img class="avatar" src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=200" alt="Cat">
+    <div class="content">
+      <div class="line-top">
+        <div class="sender">Chewy Promotions</div>
+        <div class="time">4:58 PM</div>
+      </div>
+      <div class="subject">Biggest sales of the year!</div>
+      <div class="snippet">Hey there! We're writing to tell you about our…</div>
+    </div>
+  </div>
+
+  <!-- Email 2 -->
+  <div class="item">
+    <img class="avatar" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=200" alt="Dog">
+    <div class="content">
+      <div class="line-top">
+        <div class="sender">Best Buy</div>
+        <div class="time">12:32 PM</div>
+      </div>
+      <div class="subject">Your Best Buy eReceipt</div>
+      <div class="snippet">Thank you for shopping at Best Buy, here is…</div>
+    </div>
+  </div>
+
+  <!-- Email 3 -->
+  <div class="item">
+    <img class="avatar" src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=200" alt="Cat 2">
+    <div class="content">
+      <div class="line-top">
+        <div class="sender">Netflix</div>
+        <div class="time">9:00 AM</div>
+      </div>
+      <div class="subject">Here's what's coming soon to Netflix</div>
+      <div class="snippet">Brand new movies and shows, old favorites…</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
