@@ -7,8 +7,12 @@ p {
 
 
 .thumbnail {
+<<<<<<< HEAD
   width: 300px;
   display: block;
+=======
+  width: 100%;
+>>>>>>> a20ff8e (CSS Grid)
 }
 
 .search-bar {
@@ -23,18 +27,22 @@ p {
   margin-bottom: 12px;
 }
 
+<<<<<<< HEAD
 .video-preview {
   width: 300px;
   display: inline-block;
   vertical-align: top;
   margin-right: 15px;
 }
+=======
+>>>>>>> a20ff8e (CSS Grid)
 
 .channel-picture,
 .video-info {
   display: inline-block;
 }
 
+<<<<<<< HEAD
 .channel-picture {
   width: 50px;
   vertical-align: top;
@@ -43,6 +51,9 @@ p {
 .video-info {
   width: 200px;
 }
+=======
+
+>>>>>>> a20ff8e (CSS Grid)
 
 .profile-picture {
   width: 40px;
@@ -62,4 +73,19 @@ p {
 
 .video-author {
   margin-bottom: 4px;
+<<<<<<< HEAD
+=======
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+>>>>>>> a20ff8e (CSS Grid)
 }
