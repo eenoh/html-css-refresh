@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Position Example</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* Right sidebar */
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      background-color: green;
+      color: white;
+      padding: 10px;
+    }
+
+    /* Modal overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Modal content*/
+    .modal {
+      background-color: white;
+      padding: 20px 24px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .modal p {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .close-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+      border: 1px solid #888;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Right sidebar -->
+  <div class="sidebar">
+    right sidebar
+  </div>
+
+  <!-- Modal overlay -->
+  <div class="overlay">
+    <div class="modal">
+      <h2>Modal Title</h2>
+      <p>This is a modal</p>
+      <button class="close-btn">Close</button>
+    </div>
+  </div>
+
+</body>
+</html>
